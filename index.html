@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odyssey — Advanced Oncology Intelligence by Ouatrix</title>
+  <meta name="description" content="Odyssey — вероятностная система поддержки онкологических решений. Тёмная космическая интеллектуальная платформа для подбора терапии HER2+." />
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ───────── Cosmic background ───────── -->
+  <canvas id="space" aria-hidden="true"></canvas>
+  <div class="nebula-field" aria-hidden="true">
+    <div class="nebula nebula--blue"   data-depth="0.12"></div>
+    <div class="nebula nebula--violet" data-depth="0.20"></div>
+    <div class="nebula nebula--teal"   data-depth="0.16"></div>
+    <div class="nebula nebula--indigo" data-depth="0.08"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ───────── Navigation ───────── -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero">
+      <span class="nav__mark">Ouatrix</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#why" class="nav__link">Зачем</a>
+      <a href="#role" class="nav__link">Что делает</a>
+      <a href="#demo" class="nav__link">Демо</a>
+      <a href="#where" class="nav__link">Где применяется</a>
+    </nav>
+    <a href="https://t.me/ouatrix" class="btn btn--ghost nav__cta">Получить доступ</a>
+  </header>
+
+  <main>
+    <!-- ───────── Hero ───────── -->
+    <section class="hero" id="hero">
+      <div class="hero__orbit" id="heroOrbit" aria-hidden="true">
+        <div class="orbit orbit--1"><span class="orbit__dot"></span></div>
+        <div class="orbit orbit--2"><span class="orbit__dot"></span></div>
+        <div class="orbit orbit--3"><span class="orbit__dot"></span></div>
+        <div class="orbit__core"></div>
+      </div>
+
+      <div class="hero__content" data-parallax="0.25">
+        <div class="eyebrow reveal">
+          <span class="eyebrow__pulse"></span>
+          Ouatrix Medical Corp. · Probabilistic oncology decision support
+        </div>
+        <h1 class="hero__title reveal">Odyssey</h1>
+        <p class="hero__tagline reveal">Advanced oncology intelligence for better outcomes.</p>
+        <p class="hero__sub reveal">
+          Вероятностная система поддержки врачебных решений при&nbsp;HER2-положительном
+          раке молочной железы. Полностью офлайн&nbsp;— данные пациента никогда
+          не&nbsp;покидают устройство.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#demo" class="btn btn--primary">Попробовать демо <span class="btn__arrow">→</span></a>
+          <a href="#why" class="btn btn--ghost">Почему это важно</a>
+        </div>
+
+        <div class="hero__chips reveal">
+          <div class="chip"><span class="chip__num" data-count="3">0</span><span class="chip__label">ML-модели</span></div>
+          <div class="chip"><span class="chip__num" data-count="8">0</span><span class="chip__label">протоколов</span></div>
+          <div class="chip"><span class="chip__num" data-count="100" data-suffix="%">0</span><span class="chip__label">офлайн</span></div>
+        </div>
+      </div>
+
+      <a href="#why" class="scroll-cue" aria-label="Прокрутить вниз">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ───────── Why ───────── -->
+    <section class="section" id="why">
+      <div class="section__head reveal">
+        <span class="section__kicker">01 — Проблема</span>
+        <h2 class="section__title">Почему Odyssey необходим</h2>
+        <p class="section__lead">
+          Подбор неоадъювантной терапии при&nbsp;HER2+ — это решение под
+          неопределённостью: десятки протоколов, гетерогенная биология опухоли
+          и&nbsp;разрозненные данные. Odyssey собирает доказательную базу
+          в&nbsp;единую вероятностную картину прямо у&nbsp;постели пациента.
+        </p>
+      </div>
+
+      <div class="cards cards--3">
+        <article class="card reveal" data-tilt>
+          <div class="card__icon">⚖️</div>
+          <h3 class="card__title">Решение под неопределённостью</h3>
+          <p class="card__text">
+            pCR-ответ, прирост от&nbsp;терапии и&nbsp;долгосрочная выживаемость —
+            врачу приходится взвешивать их&nbsp;одновременно. Без&nbsp;инструмента
+            оценки часто расходятся.
+          </p>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__icon">🧩</div>
+          <h3 class="card__title">Разрозненные данные</h3>
+          <p class="card__text">
+            Клиника, рецепторный статус, PAM50, биомаркеры&nbsp;— разные источники.
+            Odyssey объединяет их&nbsp;в&nbsp;один прозрачный сценарий
+            с&nbsp;понятной мерой уверенности.
+          </p>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__icon">🔒</div>
+          <h3 class="card__title">Приватность по&nbsp;умолчанию</h3>
+          <p class="card__text">
+            Облачные сервисы рискуют чувствительными данными. Odyssey работает
+            локально: ни&nbsp;одна запись пациента не&nbsp;уходит
+            в&nbsp;сеть.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────── Role / What it does ───────── -->
+    <section class="section" id="role">
+      <div class="section__head reveal">
+        <span class="section__kicker">02 — Роль</span>
+        <h2 class="section__title">Какую задачу выполняет</h2>
+        <p class="section__lead">
+          Три модели работают вместе и&nbsp;превращают данные пациента
+          в&nbsp;ранжированные варианты лечения, кривые выживаемости
+          и&nbsp;экспортируемый клинический отчёт. Это&nbsp;инструмент поддержки&nbsp;—
+          финальное решение всегда за&nbsp;онкологом.
+        </p>
+      </div>
+
+      <div class="models">
+        <article class="model reveal" data-tilt>
+          <div class="model__tag">M1</div>
+          <h3 class="model__title">Вероятность pCR</h3>
+          <p class="model__text">
+            Оценивает, ответит&nbsp;ли опухоль полным патоморфологическим ответом
+            на&nbsp;неоадъювантную терапию.
+          </p>
+          <div class="model__metric"><span class="mono">OOF AUC ≈ 0.80</span></div>
+        </article>
+        <article class="model reveal" data-tilt>
+          <div class="model__tag">M2</div>
+          <h3 class="model__title">Ранжирование протоколов</h3>
+          <p class="model__text">
+            Сравнивает режимы (TDM1+P, THP, нератиниб…) и&nbsp;показывает,
+            какой&nbsp;даёт наибольший ожидаемый прирост.
+          </p>
+          <div class="model__metric"><span class="mono">S-Learner · uplift</span></div>
+        </article>
+        <article class="model reveal" data-tilt>
+          <div class="model__tag">M3</div>
+          <h3 class="model__title">Анализ выживаемости</h3>
+          <p class="model__text">
+            Строит долгосрочный прогноз методом Cox&nbsp;PH со&nbsp;стратификацией
+            по&nbsp;когортам.
+          </p>
+          <div class="model__metric"><span class="mono">CoxPH · c-index 0.69</span></div>
+        </article>
+      </div>
+
+      <ul class="pills reveal">
+        <li class="pill">Ранжированные варианты терапии</li>
+        <li class="pill">Шкала вероятности pCR</li>
+        <li class="pill">Кривые выживаемости</li>
+        <li class="pill">Сценарный таймлайн</li>
+        <li class="pill">Экспорт клинического PDF</li>
+      </ul>
+    </section>
+
+    <!-- ───────── Interactive demo ───────── -->
+    <section class="section" id="demo">
+      <div class="section__head reveal">
+        <span class="section__kicker">03 — Интерактив</span>
+        <h2 class="section__title">Превью поддержки решений</h2>
+        <p class="section__lead">
+          Подвигайте параметры пациента&nbsp;— и&nbsp;посмотрите, как&nbsp;меняется
+          вероятностная картина. <strong>Это&nbsp;иллюстрация работы интерфейса,
+          а&nbsp;не&nbsp;клинический расчёт.</strong>
+        </p>
+      </div>
+
+      <div class="demo reveal">
+        <div class="demo__controls">
+          <div class="control">
+            <label>HER2-индекс <span class="control__val" id="v-her2">62</span></label>
+            <input type="range" id="r-her2" min="0" max="100" value="62" />
+          </div>
+          <div class="control">
+            <label>Пролиферация <span class="control__val" id="v-prolif">55</span></label>
+            <input type="range" id="r-prolif" min="0" max="100" value="55" />
+          </div>
+          <div class="control">
+            <label>Иммунный сигнал (TIL) <span class="control__val" id="v-immune">48</span></label>
+            <input type="range" id="r-immune" min="0" max="100" value="48" />
+          </div>
+          <div class="control control--toggle">
+            <label>ER-статус</label>
+            <div class="seg" id="seg-er">
+              <button class="seg__btn is-active" data-er="neg">ER&minus;</button>
+              <button class="seg__btn" data-er="pos">ER+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo__readout">
+          <div class="gauge">
+            <svg viewBox="0 0 200 200" class="gauge__svg">
+              <defs>
+                <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#4EA1FF" />
+                  <stop offset="50%" stop-color="#22D3EE" />
+                  <stop offset="100%" stop-color="#8B5CF6" />
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="84" class="gauge__track" />
+              <circle cx="100" cy="100" r="84" class="gauge__value" id="gaugeArc" />
+            </svg>
+            <div class="gauge__center">
+              <span class="gauge__num" id="pcrNum">0%</span>
+              <span class="gauge__cap">вероятность pCR</span>
+            </div>
+          </div>
+
+          <div class="ranks">
+            <div class="ranks__title">Ранжирование протоколов</div>
+            <div class="rank" data-arm="TDM1P"><span class="rank__name">T-DM1 + Pertuzumab</span><div class="rank__bar"><i></i></div></div>
+            <div class="rank" data-arm="THP"><span class="rank__name">Taxol + Trast. + Pert.</span><div class="rank__bar"><i></i></div></div>
+            <div class="rank" data-arm="CT_T"><span class="rank__name">ХТ + Трастузумаб</span><div class="rank__bar"><i></i></div></div>
+            <div class="rank" data-arm="NER"><span class="rank__name">Нератиниб</span><div class="rank__bar"><i></i></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="demo__disclaimer reveal">Иллюстративный движок · значения синтетические · не&nbsp;для клинического применения.</p>
+    </section>
+
+    <!-- ───────── Where ───────── -->
+    <section class="section" id="where">
+      <div class="section__head reveal">
+        <span class="section__kicker">04 — Применение</span>
+        <h2 class="section__title">Где используется</h2>
+        <p class="section__lead">
+          От&nbsp;мультидисциплинарного консилиума до&nbsp;офлайн-клиник
+          и&nbsp;исследовательских центров&nbsp;— Odyssey работает там, где важны
+          точность, приватность и&nbsp;скорость.
+        </p>
+      </div>
+
+      <div class="cards cards--4">
+        <article class="usecase reveal" data-tilt>
+          <div class="usecase__num">01</div>
+          <h3 class="usecase__title">Онкоконсилиумы</h3>
+          <p class="usecase__text">Единая вероятностная картина для&nbsp;обсуждения сложного случая командой.</p>
+        </article>
+        <article class="usecase reveal" data-tilt>
+          <div class="usecase__num">02</div>
+          <h3 class="usecase__title">Офлайн-клиники</h3>
+          <p class="usecase__text">Регионы со&nbsp;слабой связью и&nbsp;строгими требованиями к&nbsp;приватности.</p>
+        </article>
+        <article class="usecase reveal" data-tilt>
+          <div class="usecase__num">03</div>
+          <h3 class="usecase__title">Исследования</h3>
+          <p class="usecase__text">Сценарный анализ когорт и&nbsp;поддержка клинических испытаний.</p>
+        </article>
+        <article class="usecase reveal" data-tilt>
+          <div class="usecase__num">04</div>
+          <h3 class="usecase__title">Обучение</h3>
+          <p class="usecase__text">Наглядная демонстрация компромиссов терапии для&nbsp;ординаторов.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────── Stats band ───────── -->
+    <section class="stats" id="stats">
+      <div class="stat reveal"><span class="stat__num mono" data-count="80" data-suffix="%">0</span><span class="stat__label">OOF AUC модели pCR</span></div>
+      <div class="stat reveal"><span class="stat__num mono" data-count="8">0</span><span class="stat__label">протоколов в&nbsp;ранжировании</span></div>
+      <div class="stat reveal"><span class="stat__num mono" data-count="3">0</span><span class="stat__label">связанные ML-модели</span></div>
+      <div class="stat reveal"><span class="stat__num mono" data-count="0" data-text="∞">0</span><span class="stat__label">данных уходит в&nbsp;облако</span></div>
+    </section>
+
+    <!-- ───────── CTA ───────── -->
+    <section class="cta" id="cta">
+      <div class="cta__card reveal" data-tilt>
+        <h2 class="cta__title">Готовы пройти Odyssey?</h2>
+        <p class="cta__text">
+          Десктоп-приложение запускается по&nbsp;лицензионному ключу, проводит врача
+          через&nbsp;быструю настройку и&nbsp;открывает рабочее пространство принятия
+          решений.
+        </p>
+        <div class="keyfield" id="keyfield" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <a href="https://t.me/ouatrix" class="btn btn--primary btn--lg">Запросить доступ <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───────── Footer ───────── -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="footer__mark">Odyssey</span>
+      <span class="footer__by">Ouatrix Medical Corp.</span>
+    </div>
+    <p class="footer__disclaimer">
+      RESEARCH TOOL — NOT FOR CLINICAL USE. Все выводы должны быть проверены
+      квалифицированным онкологом. Система предназначена для&nbsp;исследовательских целей.
+    </p>
+    <div class="footer__meta">
+      <span>build 0.0.5</span>
+      <span class="dot">·</span>
+      <span>Probabilistic oncology decision support</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
